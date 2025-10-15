@@ -28,3 +28,25 @@ yarn-error.log*
 .idea/
 .DS_Store
 Thumbs.db
+
+# Dependencias
+node_modules/
+backend/__pycache__/
+.venv/
+
+# Archivos del sistema
+*.log
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+Thumbs.db
+
+# Entorno virtual
+env/
+venv/
+.env
+
+# Archivos temporales de VSCode o editor
+.vscode/
+
