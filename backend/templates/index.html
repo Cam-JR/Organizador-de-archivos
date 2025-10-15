@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Organizador de Archivos</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Organizador</h1>
+      <p class="subtitle">Ordena tus archivos por tipo o por fecha</p>
+    </header>
+
+    <main>
+      <div class="card">
+        <label>Ruta de la carpeta</label>
+        <div class="row">
+          <input id="folderInput" placeholder="Ej: C:/Users/CAMILA/Downloads" />
+          <button id="selectBtn">📂 Seleccionar</button>
+        </div>
+
+        <div class="options">
+          <label><input type="radio" name="mode" value="type" checked> Por tipo</label>
+          <label><input type="radio" name="mode" value="date"> Por fecha</label>
+          <select id="dateBy" title="Usar fecha de">
+            <option value="modified">Fecha modificación</option>
+            <option value="created">Fecha creación</option>
+          </select>
+        </div>
+
+        <div class="actions">
+          <button id="previewBtn" class="muted">Ver previa</button>
+          <button id="organizeBtn" class="primary">🚀 Organizar</button>
+        </div>
+
+        <div id="result" class="result"></div>
+      </div>
+    </main>
+
+    <footer>Cam — Organizador de Archivos</footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

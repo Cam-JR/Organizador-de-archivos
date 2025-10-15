@@ -1,0 +1,49 @@
+:root{
+  --bg1:#0f172a;  /* azul muy oscuro */
+  --card:#0b1220;
+  --accent:#7c3aed; /* violeta */
+  --muted:#94a3b8;
+  --glass: rgba(255,255,255,0.03);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(180deg, #020617 0%, #071332 100%);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: #e6eef8;
+}
+
+.app{ width:920px; max-width:95%; }
+
+header{text-align:center;margin-bottom:18px}
+h1{margin:0;font-size:28px;letter-spacing:1px}
+.subtitle{margin:6px 0 0;color:var(--muted);font-size:13px}
+
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  padding:22px;border-radius:14px;box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+.row{display:flex;gap:10px;align-items:center}
+input[type="text"], input, #folderInput{
+  flex:1;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
+  background: transparent;color:inherit;outline:none;
+}
+button{padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+
+button#selectBtn{background:var(--glass);color:var(--muted)}
+.options{display:flex;gap:12px;align-items:center;margin:12px 0;color:var(--muted)}
+.options select{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:6px;border-radius:8px;color:inherit}
+
+.actions{display:flex;gap:10px;justify-content:flex-end;margin-top:10px}
+button.muted{background:transparent;border:1px solid rgba(255,255,255,0.05);color:var(--muted)}
+button.primary{background:linear-gradient(90deg,var(--accent),#4f46e5);box-shadow:0 8px 20px rgba(124,58,237,0.18);color:white;font-weight:600}
+
+.result{margin-top:14px;padding:12px;border-radius:8px;background:rgba(0,0,0,0.25);font-size:14px;color:var(--muted)}
+footer{margin-top:10px;text-align:center;color:var(--muted);font-size:12px}
